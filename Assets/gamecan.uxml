@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="scorepanel" style="flex-grow: 1;">
+        <ui:Label name="scorelabel" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 25px; color: rgb(0, 11, 152);" />
+        <ui:ProgressBar value="0" title="blue ball (  SEPIDEH  )" name="scoreBarmain" high-value="140" style="opacity: 1; display: flex; height: 23px; width: 341px; color: rgb(12, 0, 250); font-size: 18px;" />
+    </ui:VisualElement>
+</ui:UXML>
