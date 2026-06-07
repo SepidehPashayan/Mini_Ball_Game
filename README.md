@@ -1,38 +1,94 @@
-💜 Mini Ball Game 🎮
+# 🎮 Mini Ball Game
 
-A physics-based 3D platformer game developed using Unity and C#
+> A physics-based 3D platformer developed in Unity and C#.  
+> Control a ball through obstacles, collect coins, and reach the finish line — without falling off.
 
-💗 Overview
+![Unity](https://img.shields.io/badge/Engine-Unity-black?logo=unity)
+![C#](https://img.shields.io/badge/Language-C%23-purple?logo=csharp)
+![Genre](https://img.shields.io/badge/Genre-3D%20Platformer-pink)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-Mini Ball Game is a simple yet structured 3D platformer where the player controls a ball and navigates through a level filled with obstacles and collectibles.  
-The objective is to reach the finish line without falling off the platform.
+---
 
-This project focuses on implementing core gameplay mechanics, physics-based movement, and game state management.
+## 🕹️ Gameplay
 
-💛 Core Mechanics
+The player controls a ball using keyboard input, navigating through a level filled with obstacles and collectibles.
 
-- Physics-driven ball movement using Unity's Rigidbody system
-- Obstacle navigation
-- Coin collection system
-- Win condition triggered upon reaching the finish line
-- Lose condition when the player falls off the platform
-- Automatic level restart on failure
+| Goal | Description |
+|---|---|
+| 🏁 Win | Reach the finish line |
+| 💀 Lose | Fall off the platform |
+| 🔄 Restart | Level resets automatically on failure |
+| 🪙 Collect | Pick up coins during the run |
 
-💚 Technical Implementation
+---
 
-- Developed in Unity
-- Scripts written in C#
-- Rigidbody-based movement system
-- Collision detection for win/lose logic
-- Scene management for restarting gameplay
-- Organized project structure following Unity best practices
+## ⚙️ Core Mechanics
 
-🤍 Game Flow
+- **Physics-driven movement** — Rigidbody-based ball controller responding to keyboard input
+- **Obstacle navigation** — physics collisions with environmental objects
+- **Coin collection** — trigger-based pickup system
+- **Win / lose detection** — collision and fall-off detection tied to game state
+- **Auto-restart** — scene reloads automatically after losing
 
-1. Player controls the ball using keyboard input.
-2. The ball moves through obstacles.
-3. Coins can be collected during gameplay.
-4. Reaching the finish line triggers a win state.
-5. Falling off the map resets the level.
+---
 
-💙 Sepideh Pashayan
+## 🧱 Technical Implementation
+
+| Area | Detail |
+|---|---|
+| Engine | Unity |
+| Language | C# |
+| Movement | `Rigidbody.AddForce` / physics-based |
+| Collision | `OnTriggerEnter` / `OnCollisionEnter` |
+| Scene control | `SceneManager.LoadScene` for restart |
+| Structure | Unity best practices — separated scripts per responsibility |
+
+---
+
+## 🎬 Game Flow
+
+```
+Start
+  └─→ Player moves ball with keyboard
+        └─→ Navigate through obstacles
+              ├─→ Collect coins (optional)
+              ├─→ Reach finish line ──→ 🏆 Win
+              └─→ Fall off platform ──→ 💀 Lose ──→ 🔄 Auto-restart
+```
+
+---
+
+## 📁 Project Structure
+
+```
+MiniBallGame/
+├── Assets/
+│   ├── Scripts/        # C# gameplay scripts
+│   ├── Scenes/         # Unity scene files
+│   ├── Prefabs/        # Ball, obstacles, coins, finish line
+│   └── Materials/      # Visual materials
+├── ProjectSettings/
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+- Unity **2021.3 LTS** or newer
+
+### Run the project
+
+1. Clone or download the repository
+2. Open the project folder in **Unity Hub**
+3. Open the main scene from `Assets/Scenes/`
+4. Press **Play** in the Unity Editor
+
+---
+
+## 👩‍💻 Author
+
+**Sepideh Pashayan**
